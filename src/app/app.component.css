@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 body {
+    background-image: url(../assets/images/fondoo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -92,6 +93,7 @@ body {
 }
 
 .encabezado{
+    background-image: url(../assets/images/head.png);
 	height: 300px;
 	background-size: cover;
 	display: flex;
