@@ -11,7 +11,7 @@
   <div class="encabezado">
       <p>Tecnologias Emergentes SIS-414</p>
       <h1>PRIMER PARCIAL</h1>
-      <p>Cristian Kevin Gallardo Coro</p>
+      <p>Cristian Kevin Gallardo Coroasdsdasdas</p>
   </div>
   <div class="capa"></div>
 </header>
@@ -90,6 +90,34 @@
       </button>
   </a>
 
+</div>
+<br>
+<div class="Tabla">
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Usuario</th>
+            <th>Correo</th>
+        </tr>
+        <tr *ngFor="let user of dataUsers">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+        </tr>
+        <tr *ngFor="let item of dataLanguajes">
+            <td>{{item.languajes.name}}</td>
+            <td>{{item.languajes.dificultad}}</td>
+        </tr>
+    </table>
 </div>
 
 
