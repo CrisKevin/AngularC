@@ -7,13 +7,36 @@ import { Observable } from 'rxjs';
 })
 export class LenguajesService {
 
-  url: string = "https://apii-5f0de-default-rtdb.firebaseio.com/v1/topLenguaje.json"
+  url: string = "https://apii-5f0de-default-rtdb.firebaseio.com/v1/topLenguaje"
 
   constructor(private http: HttpClient) { }
 
 
   getLenguajes(): Observable<any>
   {
-    return this.http.get(this.url)
+    let getUrl = this.url + ".json"
+    return this.http.get(getUrl)
+  }
+
+  postLenguajes(body:any): Observable<any>
+  {
+    let posUrl = this.url + ".json"
+    return this.http.post(posUrl, body)
+  }
+
+  deleteLenguajes(id:string): Observable<any>
+  {
+    
+    let delUrl = this.url + "/" + id + ".json"
+    return this.http.delete(delUrl)
+
+  }
+
+  updateLenguajes(id:string, body:any): Observable<any>
+  {
+
+    let updUrl = this.url + "/" + id + ".json"
+    return this.http.put(updUrl, body)
+
   }
 }

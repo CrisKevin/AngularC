@@ -92,6 +92,25 @@
 
 </div>
 <br>
+<div class="formulario">
+    <div class="divi">
+        <label>Materia:</label>
+        <input type="text" [(ngModel)]="materia">
+    </div>  
+    <br>
+    <div class="divi">
+        <label>Sigla:</label>
+        <input type="text" [(ngModel)]="sigla">
+    </div>
+    <br>
+    <div class="divi">
+        <label>Nota:</label>
+        <input type="text" [(ngModel)]="nota">
+    </div>
+    <br>    
+    <input type="button" value="Añadir" (click) = "guardar()">
+</div>
+<br>
 <div class="Tabla">
     <table border="1">
         <tr>
@@ -108,7 +127,7 @@
         </tr>
     </table>
     <br>
-    <table border="1">
+    <!--<table border="1">
         <tr>
             <th>Id</th>
             <th>Nombre</th>
@@ -117,6 +136,51 @@
             <td>{{item.languajes.name}}</td>
             <td>{{item.languajes.dificultad}}</td>
         </tr>
+    </table> -->
+    <table border="3">
+        <thead>
+            <tr>
+                <th>Nro</th>
+                <th>Materias por aprobar</th>
+                <th>Sigla</th>
+                <th>Nota</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of dataSource; let numero = index">
+                <th>{{numero + 1}}</th>
+                <th>{{row.materia}}</th>
+                <th>{{row.sigla}}</th>
+                <th>{{row.nota}}</th>
+                <th>
+                    <button (click) = "Actualizando(row.id)">Editar</button>
+                    <button (click) = "Eliminar(row.id)">Eliminar</button>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <table border="2">
+        <thead>
+            <tr>
+                <th colspan="3">Editar dato</th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr>
+                <td>Materia</td>
+                <td>Sigla</td>
+                <td>Nota</td>
+            </tr>
+            <tr>
+                <td><input type="text" [(ngModel)]="materiaCambio"></td>
+                <td><input type="text" [(ngModel)]="siglaCambio"></td>
+                <td><input type="text" [(ngModel)]="notaCambio"></td>
+            </tr>
+        </tbody>
+    
     </table>
 </div>
 
