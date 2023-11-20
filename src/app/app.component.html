@@ -92,40 +92,29 @@
 
 </div>
 <br>
-<div class="formulario">
-    <div class="divi">
-        <label>Materia:</label>
-        <input type="text" [(ngModel)]="materia">
-    </div>  
-    <br>
-    <div class="divi">
-        <label>Sigla:</label>
-        <input type="text" [(ngModel)]="sigla">
-    </div>
-    <br>
-    <div class="divi">
-        <label>Nota:</label>
-        <input type="text" [(ngModel)]="nota">
-    </div>
-    <br>    
-    <input type="button" value="Agregar materia" (click) = "guardar()">
-</div>
+
 <br>
 <div class="Tabla">
-    <table border="1">
-        <tr>
-            <th>Id</th>
-            <th>Nombre</th>
-            <th>Usuario</th>
-            <th>Correo</th>
-        </tr>
-        <tr *ngFor="let user of dataUsers">
-            <td>{{user.id}}</td>
-            <td>{{user.name}}</td>
-            <td>{{user.username}}</td>
-            <td>{{user.email}}</td>
-        </tr>
-    </table>
+    
+    <div class="formulario">
+        <div class="divi">
+            <label>Materia:</label>
+            <input type="text" [(ngModel)]="materia">
+        </div>  
+        <br>
+        <div class="divi">
+            <label>Sigla:</label>
+            <input type="text" [(ngModel)]="sigla">
+        </div>
+        <br>
+        <div class="divi">
+            <label>Nota:</label>
+            <input type="text" [(ngModel)]="nota">
+        </div>
+        <br>    
+        <input type="button" value="Agregar materia" (click) = "guardar()">
+    </div>
+
     <br>
     <!--<table border="1">
         <tr>
@@ -161,7 +150,7 @@
         </tbody>
     </table>
     <br><br>
-    <table border="2">
+    <table border="5">
         <thead>
             <tr>
                 <th colspan="3">Editar dato</th>
@@ -175,14 +164,14 @@
                 <td>Nota</td>
             </tr>
             <tr>
-                <td><input type="text" [(ngModel)]="materiaCambio"></td>
-                <td><input type="text" [(ngModel)]="siglaCambio"></td>
-                <td><input type="text" [(ngModel)]="notaCambio"></td>
+                <td><input type="text" [(ngModel)]="materiaCambio" size="15"></td>
+                <td><input type="text" [(ngModel)]="siglaCambio" size="3"></td>
+                <td><input type="text" [(ngModel)]="notaCambio" size="3"></td>
             </tr>
         </tbody>
-    
     </table>
+    
 </div>
-
+<br><br>
 
 

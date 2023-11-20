@@ -123,9 +123,9 @@ body {
 
 .Tabla{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 }
 .formulario{
 	display: flex;
