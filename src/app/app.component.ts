@@ -76,9 +76,7 @@ Actualizando(id:string){
 
   var aux = confirm("Seguro que quiere cambiar este dato, no se podra guardar el anterior")
   let cuerpo = {
-    materia: this.materiaCambio,
-    sigla: this.siglaCambio,
-    nota: this.notaCambio
+    
   }
   if(aux) {
     this.Estodefine.updateLenguajes(id,cuerpo).subscribe((data) =>{
