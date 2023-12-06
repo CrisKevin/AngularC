@@ -1,0 +1,7 @@
+<div class="topnav">
+    <a class="active" routerLink="/login" *ngIf="user==null">Login <span >{{user}}</span> </a>
+    <a  routerLink="/register" *ngIf="user==null">Registrarse</a>
+    <a class="active" routerLink="/homee" *ngIf="user!=null">Hola <span >{{user}}</span> </a>
+    <a  routerLink="/homee">Inicio</a>
+    <a  href="#" (click)="salir()" *ngIf="user!=null">Cerrar Sesion</a>
+  </div>
