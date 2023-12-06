@@ -19,7 +19,7 @@ export class RegisterComponent {
   guardar(){
 
   this.authService.register(this.email,this.password).then(res=>{
-    this.router.navigate(["/"])
+    this.router.navigate(["/homee"])
   }).catch(error=>{
     console.log(error)
   })

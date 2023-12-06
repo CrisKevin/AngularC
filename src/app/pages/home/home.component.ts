@@ -41,7 +41,6 @@ this.userServices.getUsers().subscribe((data) => this.dataUsers = data);
     var row = {id: key, materia: data[key].materia, sigla: data[key].sigla, nota:data[key].nota}
     this.dataSource.push(row)
   }
-  console.log(this.dataSource)
   } ) 
 
 }
